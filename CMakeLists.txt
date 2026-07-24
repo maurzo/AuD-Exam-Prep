@@ -11,7 +11,7 @@ function(add_exam_module target)
     add_library(${target} STATIC ${ARGN})
     target_include_directories(${target} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
     target_compile_options(${target} PRIVATE
-        $<$<CXX_COMPILER_ID:AppleClang,Clang,GNU>:-Wall -Wextra -Wpedantic>
+        $<$<CXX_COMPILER_ID:AppleClang,Clang,GNU>:-Wall >
     )
 endfunction()
 
